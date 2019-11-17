@@ -17,7 +17,6 @@ namespace HomeHelper
         {
             var host = CreateWebHostBuilder(args).Build();
             var botService = host.Services.GetService(typeof(IBotService)) as IBotService;
-            botService.StatusReport();
             host.Run();
         }
 

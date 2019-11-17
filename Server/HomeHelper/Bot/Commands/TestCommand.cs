@@ -7,12 +7,12 @@ namespace HomeHelper.Bot.Commands
     {
         public override string Name => "test";
 
-        public override async void Execute(Message message, TelegramBotClient client)
+        public override async void Execute(Message message, TeleBot bot)
         {
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 
-            await client.SendTextMessageAsync(chatId, "", replyToMessageId: messageId);
+            await bot.Client.SendTextMessageAsync(chatId, "", replyToMessageId: messageId);
         }
     }
 }

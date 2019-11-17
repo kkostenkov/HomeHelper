@@ -34,7 +34,7 @@ namespace HomeHelper
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddTransient<IBotService, BotService>();
+            services.AddSingleton<IBotService, BotService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
